@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garance Plzeň</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+    <!-- Lokální CSS soubory -->
+    <link rel="stylesheet" href="css/sitesCSS/navbar.css">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Lokální JavaScript soubory -->
+    <script src="websites/carousel/carousel.js"></script>
+    <script src="websites/facts/facts.js"></script>
+    <script src="websites/footer/footer.js"></script>
+    <script src="websites/form/form.js"></script>
+    <script src="websites/navbar/navbar.js"></script>
+    <script src="websites/projects/projects.js"></script>
+    
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+    <!-- Spinner Start -->
+
+    <!-- Spinner End -->
+
+    <!------------------------------------------------ Navbar START --------------------------------------------------------->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Garance Plzeň" height="40">
+            </a>
+    
+            <!-- Tlačítko pro mobilní menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Odkazy -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Domů</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Služby</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projekty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+    <!--------------------------------------------------------- Navbar END ---------------------------------------------------------->
+
+    <!--------------------------------------------------------- Carousel START ------------------------------------------------------>
+    <div id="Home" class="carousel slide overflow-hidden" data-bs-ride="carousel">
+        <div class="carousel-inner h-100">
+            <!-- První slide -->
+            <div class="carousel-item active h-100">
+                <picture>
+                    <source srcset="img/carousel/carouselpc.jpg" media="(min-width: 768px)">
+                    <img src="img/carousel/carouselphone.jpg" class="d-block w-100 h-100" alt="Slide 1">
+                </picture>
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="text-box bg-opacity-50 p-4 rounded text-center">
+                        <h1 class="display-4 text-white mb-0">Provádíme nejlepší realizaci klimatizací</h1>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Druhý slide -->
+            <div class="carousel-item h-100">
+                <picture>
+                    <source srcset="img/carousel/carousel2pc.jpg" media="(min-width: 768px)">
+                    <img src="img/carousel/carousel2phone.jpg" class="d-block w-100 h-100" alt="Slide 2">
+                </picture>
+                <div class="carousel-caption d-flex align-items-center justify-content-center">
+                    <div class="text-box bg-opacity-50 p-4 rounded text-center">
+                        <h1 class="display-4 text-white mb-0">Objednání, instalace, opravy i pravidelný servis</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Ovládací prvky -->
+        <button class="arrow arrow-prev" type="button" data-bs-target="#Home" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="arrow arrow-next" type="button" data-bs-target="#Home" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    
+    
+    <!---------------------------- Carousel END ---------------------------->
+
+    <!---------------------------- Information START ---------------------------->
+    <div id="Information" class="container-xxl py-6">
+        <div class="container">
+            <!-- Nadpis sekce -->
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5">Naše Služby</h1>
+                <p class="text-muted">Poskytujeme komplexní řešení v oblasti klimatizací a tepelných čerpadel. Naše služby zahrnují instalace, opravy a pravidelný servis.</p>
+            </div>
+    
+            <!-- Karty služeb -->
+            <div class="row g-5 justify-content-center">
+                <!-- První služba -->
+                <div class="col-lg-4 col-md-6 item-animate">
+                    <a href="#" class="service-container">
+                        <div class="item overflow-hidden position-relative">
+                            <div class="image-container">
+                                <img src="img/information/instalation.jpg" alt="Instalace" class="img-fluid w-100">
+                            </div>
+                            <div class="service-content d-flex align-items-center bg-light py-3 px-4">
+                                <div class="service-icon bg-primary rounded-circle p-3 me-3">
+                                    <img class="img-fluid" src="img/icon/icon-01-light.png" alt="Ikona instalace">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Instalace</h5>
+                                    <p class="text-muted mb-0">Odborné poradenství a instalace klimatizací a tepelných čerpadel.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- Druhá služba -->
+                <div class="col-lg-4 col-md-6 item-animate">
+                    <a href="#" class="service-container">
+                        <div class="item overflow-hidden position-relative">
+                            <div class="image-container">
+                                <img src="img/information/repair.jpg" alt="Servis" class="img-fluid w-100">
+                            </div>
+                            <div class="service-content d-flex align-items-center bg-light py-3 px-4">
+                                <div class="service-icon bg-primary rounded-circle p-3 me-3">
+                                    <img class="img-fluid" src="img/icon/icon-02-light.png" alt="Ikona servis">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Servis</h5>
+                                    <p class="text-muted mb-0">Pravidelná údržba a opravy.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+    
+                <!-- Třetí služba -->
+                <div class="col-lg-4 col-md-6 item-animate">
+                    <a href="#Categories" class="service-container">
+                        <div class="item overflow-hidden position-relative">
+                            <div class="image-container">
+                                <img src="img/information/sell.jpg" alt="Prodej" class="img-fluid w-100">
+                            </div>
+                            <div class="service-content d-flex align-items-center bg-light py-3 px-4">
+                                <div class="service-icon bg-primary rounded-circle p-3 me-3">
+                                    <img class="img-fluid" src="img/icon/icon-03-light.png" alt="Ikona prodej">
+                                </div>
+                                <div>
+                                    <h5 class="mb-1">Prodej</h5>
+                                    <p class="text-muted mb-0">Široký sortiment klimatizačních zařízení.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------- Information END ---------------------------->
+
+    <!---------------------------- Facts START ---------------------------->
+    <div id="facts-container" class="container-fluid facts my-5 py-5 d-flex align-items-center">
+        <div class="container">
+            <div class="row text-center justify-content-center g-4">
+                <div class="col-sm-6 col-lg-3">
+                    <h1 class="display-4 text-white" data-toggle="counter-up" data-target="356" data-speed="1">0</h1>
+                    <a href="#Projekty" class="text-decoration-none">
+                        <span class="text-primary btn btn-outline-light py-2 px-4">Dokončené projekty</span>
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h1 class="display-4 text-white" data-toggle="counter-up" data-target="2" data-speed="1">0</h1>
+                    <button class="text-primary btn btn-outline-light py-2 px-4" id="openCertifikatyModal" data-bs-toggle="modal" data-bs-target="#certifikatyModal">
+                        Certifikáty
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------- Certificates START ---------------------------->
+
+    <div class="modal fade" id="certifikatyModal" tabindex="-1" aria-labelledby="certifikatyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="certifikatyModalLabel">Naše certifikáty</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="certifikatyCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/certificates/cert1.jpeg" class="d-block w-100 rounded" alt="Certifikát 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/certificates/cert2.jpg" class="d-block w-100 rounded" alt="Certifikát 2">
+                            </div>
+                        </div>
+                        <button class="arrow arrow-prev" type="button" data-bs-target="#certifikatyCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="arrow arrow-next" type="button" data-bs-target="#certifikatyCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------- Certificates END ---------------------------->
+    <!---------------------------- Facts END ---------------------------->
+
+
+    <!---------------------------- Categories START ---------------------------->
+    <div id="Categories" class="container-xxl py-6">
+
+        <div class="container">
+            <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5">Objevte Naše Produkty</h1>
+                <p class="text-muted">Nabízíme širokou škálu klimatizací a tepelných čerpadel od předních světových výrobců.</p>
+            </div>
+        
+            <div class="row g-5 justify-content-center">
+                <!-- První box: Klimatizace -->
+                <div class="col-lg-5 col-md-6 item-animate">
+                    <div class="category-box item overflow-hidden">
+                        <div class="image-container">
+                            <img src="img/airconditioner1.jpg" class="h-400" alt="Klimatizace">
+                        </div>
+                        <div class="card-body text-center bg-white">
+                            <h4 class="card-title">Klimatizace</h4>
+                            <p class="card-text text-muted">Vyberte si z našich moderních klimatizačních řešení pro váš domov nebo kancelář.</p>
+                        </div>
+                        <div class="overlay d-flex justify-content-center align-items-center">
+                            <div class="overlay-content text-center">
+                                <a href="https://samsung-climatesolutions.com/cz/b2c/products.html" target="_blank" rel="noopener noreferrer">Samsung</a>
+                                <a href="https://www.lg.com/cz/bytove-klimatizace/bytove-klimatizace" target="_blank" rel="noopener noreferrer">LG</a>
+                                <a href="https://www.sinclair-solutions.com/cs/produkty/nastenne-klimatizace-168/" target="_blank" rel="noopener noreferrer">Sinclair</a>
+                                <a href="https://aux.cz/produkty" target="_blank" rel="noopener noreferrer">Aux</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Druhý box: Tepelná čerpadla -->
+                <div class="col-lg-5 col-md-6 item-animate">
+                    <div class="category-box item overflow-hidden">
+                        <div class="image-container">
+                            <img src="img/heatpump.jpg" class="h-400" alt="Tepelná čerpadla">
+                        </div>
+                        <div class="card-body text-center bg-white">
+                            <h4 class="card-title">Tepelná čerpadla</h4>
+                            <p class="card-text text-muted">Efektivní a ekologická řešení vytápění a chlazení pro každou budovu.</p>
+                        </div>
+                        <div class="overlay d-flex justify-content-center align-items-center">
+                            <div class="overlay-content text-center">
+                                <a href="https://samsung-climatesolutions.com/cz/b2c/products.html" target="_blank" rel="noopener noreferrer">Samsung</a>
+                                <a href="https://www.cerpadla-lg.cz/cz/produkty" target="_blank" rel="noopener noreferrer">LG</a>
+                                <a href="https://www.sinclair-solutions.com/cs/produkty/tepelna-cerpadla/" target="_blank" rel="noopener noreferrer">Sinclair</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------- Categories END ---------------------------->
+
+    <!---------------------------- Projects START ---------------------------->
+    <div id="Projekty" class="container-xxl py-6">
+        <div class="container">
+            <!-- Nadpis a popis sekce -->
+            <div class="text-center mx-auto wow fadeInUp mb-5" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="display-5">Naše Realizované Projekty</h1>
+                <p class="text-muted">Podívejte se na ukázky našich dokončených projektů a inspirujte se našimi realizacemi, které jsme dokončili s maximální péčí a odborností.</p>
+            </div>
+            <!-- Boxy projektů -->
+            <div class="row g-4 justify-content-center">
+                <!-- Projekt 1 -->
+                <div class="col-lg-4 col-md-6 item-animate">
+                    <a href="preslovka.html" class="project-container">
+                        <div class="item  overflow-hidden position-relative">
+                            <div class="image-container">
+                                <img src="img/projects/stavba1b.jpeg" alt="Preslovka">
+                            </div>
+                            <div class="project-content d-flex align-items-center bg-white py-3 px-4 rounded-bottom">
+                                <div class="project-icon flex-shrink-0 bg-primary rounded-circle">
+                                    <img class="img-fluid" src="img/icon/icon1.png" alt="">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="text-primary mb-1">Preslovka</h5>
+                                    <p class="text-muted mb-0">Administrativní komplex vybavený moderní klimatizací.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Projekt 2 -->
+                <div class="col-lg-4 col-md-6 item-animate">
+                    <a href="mesice.html" class="project-container">
+                        <div class="item  overflow-hidden position-relative">
+                            <div class="image-container">
+                                <img src="img/projekt2.jpg" alt="Měšice">
+                            </div>
+                            <div class="project-content d-flex align-items-center bg-white py-3 px-4 rounded-bottom">
+                                <div class="project-icon flex-shrink-0 bg-primary rounded-circle">
+                                    <img class="img-fluid" src="img/icon/icon1.png" alt="">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="text-primary mb-1">Měšice</h5>
+                                    <p class="text-muted mb-0">Rodinné domy vybavené tepelnými čerpadly na míru.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Projekt 3 -->
+                <div class="col-lg-4 col-md-6 item-animate">
+                    <a href="plzen.html" class="project-container">
+                        <div class="item  overflow-hidden position-relative">
+                            <div class="image-container">
+                                <img src="img/projekt3.jpg" alt="Plzeň">
+                            </div>
+                            <div class="project-content d-flex align-items-center bg-white py-3 px-4 rounded-bottom">
+                                <div class="project-icon flex-shrink-0 bg-primary rounded-circle">
+                                    <img class="img-fluid" src="img/icon/icon1.png" alt="">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="text-primary mb-1">Plzeň</h5>
+                                    <p class="text-muted mb-0">Komplexní chlazení a vytápění průmyslového areálu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Univerzální Lightbox -->
+    <div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lightboxModalLabel">Galerie</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zavřít"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="lightboxCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <!-- Obrázky budou dynamicky doplněny pomocí JavaScriptu -->
+                        </div>
+                        <button class="arrow arrow-prev" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="arrow arrow-next" type="button" data-bs-target="#lightboxCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!---------------------------- Projects END ---------------------------->
+
+    <!---------------------------- Quote START ---------------------------->
+    <div id="Contact" class="container-fluid overflow-hidden px-lg-0 py-6">
+        <div class="container quote mw-100 px-lg-0">
+            <div class="row g-0 align-items-stretch">
+                <!-- Textová část -->
+                <div class="col-lg-6 text-white bg-dark d-flex flex-column justify-content-center px-5 py-4">
+                    <h2 class="display-5 mb-4">Máte specifické požadavky?</h2>
+                    <p class="fs-5">Rádi pro vás vytvoříme individuální návrh na míru. Kontaktujte nás prostřednictvím formuláře níže.</p>
+                </div>
+                <!-- Formulář -->
+                <div class="col-lg-6 bg-light p-5">
+                    <h3 class="mb-4 text-center">Kontaktujte nás</h3>
+                    <form id="quote-form">
+                        <div class="row g-3">
+                            <!-- Jméno a email -->
+                            <div class="col-md-6 form-animate">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="gname" name="user_name" placeholder="Jméno a příjmení">
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-animate">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="gmail" name="user_email" placeholder="Email">
+                                </div>
+                            </div>
+                            <!-- Telefon a typ zprávy -->
+                            <div class="col-md-6 form-animate">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="cname" name="user_mobile"
+                                        placeholder="Telefon"
+                                        oninput="formatPhoneNumber(this)"
+                                        onclick="showPhoneNumberGuide()"
+                                        onblur="validatePhoneNumber(this)">
+                                </div>
+                                <small id="phone-guide" class="phone-guide" style="display: none;">Např. 123 456 789</small>
+                                <small id="phone-error" class="text-danger" style="display: none;">Telefonní číslo musí mít 9 číslic.</small>
+                            </div>
+                            <div class="col-md-6 form-animate">
+                                <div class="form-floating">
+                                    <select class="form-select" id="cage" name="user_service" aria-label="Typ zprávy">
+                                        <option selected disabled>Vyberte typ zprávy</option>
+                                        <option value="obecny-dotaz">Obecný dotaz</option>
+                                        <option value="servis">Servis</option>
+                                        <option value="instalace">Instalace</option>
+                                        <option value="reklamace">Reklamace</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Zpráva -->
+                            <div class="col-12 form-animate">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="message" name="message" style="height: 120px" placeholder="Vaše zpráva"></textarea>
+                                </div>
+                            </div>
+                            <!-- Tlačítko odeslat -->
+                            <div class="col-12 text-center form-animate">
+                                <button class="btn py-2 px-5" type="submit">Odeslat zprávu</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------- Quote END ---------------------------->
+
+
+    <!---------------------------- Footer START ---------------------------->
+    <div class="container-fluid bg-dark footer mt-5 pt-4 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container custom-footer-padding">
+            <div class="row g-4">
+                <!-- Logo a popis -->
+                <div class="col-lg-4 col-md-12 text-center text-lg-start">
+                    <h1 class="text-white mb-3">
+                        <img class="img-fluid me-2" src="img/icon/icon-02-light.png" alt="Logo" style="width: 40px;">
+                        RootKlima
+                    </h1>
+                    <p class="mb-0">
+                        Nabízíme profesionální instalace a servis klimatizací. Naše zkušenosti a kvalita služeb zaručují spokojenost každého zákazníka.
+                    </p>
+                </div>
+    
+                <!-- Sekce Kontakt -->
+                <div class="col-lg-8 col-md-12 text-center">
+                    <div class="row">
+                        <!-- Sloupec 1: Adresa a telefon -->
+                        <div class="col-md-6">
+                            <h5 class="text-light mb-4">Kontakt</h5>
+                            <p>
+                                <i class="fa fa-envelope me-2"></i>
+                                <a href="mailto:rootklima@seznam.cz" class="text-white text-decoration-none">
+                                    rootklima@seznam.cz
+                                </a>
+                            </p>
+                            <p>
+                                <!-- Telefonní číslo s podmínkou pro zobrazení -->
+                                <a href="tel:+420776622447" class="phone-link text-white text-decoration-none">
+                                    <i class="fa fa-phone-alt me-2"></i>+420 776 622 447
+                                </a>
+                                <span class="phone-text">
+                                    <i class="fa fa-phone-alt me-2"></i>+420 776 622 447
+                                </span>
+                            </p>
+                        </div>
+                        <!-- Sloupec 2: Email a IČO -->
+                        <div class="col-md-6">
+                            <h5 class="text-light mb-4">Informace</h5>
+                            <p>
+                                <i class="fas fa-building me-2"></i>IČO: 08232288
+                            </p>
+                            <p>
+                                <i class="fa fa-map-marker-alt me-2"></i>Korunní 2569/108 Praha
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Spodní část s copyrightem -->
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        &copy; <a href="#">rootklima.cz</a>, Všechna práva vyhrazena.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Vytvořeno týmem <a href="#">RJ Web</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!---------------------------- Footer END ---------------------------->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+
+
+
+    <!------------------------------------------------------------JS soubory---------------------------------------------------------------->
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <!-- Lokální JS pro navbar -->
+    <script src="js/sitesJS/navbar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+/********** Template CSS **********/
+/* === ZÁKLADNÍ PROMĚNNÉ (Bootstrap neumí vlastní barvy v :root) === */
+:root {
+    --primary: #FFFF45; /* Žlutá */
+    --secondary: #008CFF; /* Modrá */
+    --light: #FFFFFF; /* Bílá */
+    --dark: #000000; /* Černá */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* === RESET A OBECNÉ STYLY (Bootstrap už resetuje, ale přidáváme drobnosti) === */
+body {
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+/* === HLAVIČKY (Bootstrap už řeší velikosti, ale barvy nastavujeme podle root) === */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+}
+
+/* === ODKAZY (Používáme Bootstrap třídy, ale hover nastavujeme ručně) === */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+/* === VLASTNÍ ÚPRAVY, KTERÉ BOOTSTRAP NEMÁ === */
+.navbar-brand img {
+    max-height: 50px;
+}
+
+/* === BOOTSTRAP BTN TŘÍDY PŘEBARVENÉ NA NAŠE BARVY === */
+.btn-primary {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--dark) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--secondary) !important;
+    color: var(--light) !important;
+}
+
+
+
+
+
+
+
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 30px;
+    bottom: 30px;
+    z-index: 99;
+}
+
+
+
+
+
+
+/* ------------------------------- Obecný styl pro šipky START -------------------------------*/
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.arrow-prev {
+    left: 1rem;
+}
+
+.arrow-next {
+    right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .arrow-prev {
+        left: 0.5rem;
+    }
+
+    .arrow-next {
+        right: 0.5rem;
+    }
+}
+/* ------------------------------- Obecný styl pro šipky END -------------------------------*/

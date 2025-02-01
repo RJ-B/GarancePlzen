@@ -1,0 +1,26 @@
+/* Ikona projektu */
+.project-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
+.project-icon img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+/* Texty v sekci */
+.project-content h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.project-content p {
+    font-size: 0.95rem;
+    margin: 0;
+}
