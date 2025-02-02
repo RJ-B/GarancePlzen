@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Název</title>
+    <title>GARANCE Plzeň</title>
+
+    <!--------------------------------------------------------- CSS soubory START --------------------------------------------------->
+    
+    <!-- Fonty písma -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,11 +29,9 @@
     <link href="css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/sitesCSS/navbar.css">
+    <link rel="stylesheet" href="css/sitesCSS/carousel.css">
 
-
-    <!-- Lokální JavaScript soubory -->
-    <script src="js/main.js"></script>
-
+    <!--------------------------------------------------------- CSS soubory END ----------------------------------------------------->
 </head>
 
 <body>
@@ -72,28 +75,63 @@
     <!--------------------------------------------------------- Navbar END ---------------------------------------------------------->
 
     <!--------------------------------------------------------- Carousel START ------------------------------------------------------>
-    <div class="container-fluid p-0">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/slide1.jpg" class="img-fluid" alt="Slide 1">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/slide2.jpg" class="img-fluid" alt="Slide 2">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/slide3.jpg" class="img-fluid" alt="Slide 3">
-                </div>
+<!-- Swiper Container -->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+            <img src="img/realizace/lazne0011.png" class="img-fluid full-screen-img" alt="Rezervační systém">
+            <div class="overlay">
+                <h3 class="animate__animated" data-aos="fade-up" data-aos-delay="000">Stavba 1</h3>
+                <p class="animate__animated" data-aos="fade-up" data-aos-delay="200">
+                    Něco k tomu.
+                </p>
+                <a href="#" class="btn btn-primary mt-2 animate__animated" data-aos="fade-up" data-aos-delay="600">
+                    Více info
+                </a>
             </div>
-    
-            <!-- Navigační šipky (Bootstrap ikony) -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-    
-            <!-- Tečky pro přepínání -->
-            <div class="swiper-pagination"></div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+            <img src="img/realizace/marianky.jpg" class="img-fluid full-screen-img" alt="Pokladní systém">
+            <div class="overlay">
+                <h3 class="animate__animated" data-aos="fade-up" data-aos-delay="000">Stavba 2</h3>
+                <p class="animate__animated" data-aos="fade-up" data-aos-delay="200">
+                    Něco k tomu.
+                </p>
+                <a href="#" class="btn btn-primary mt-2 animate__animated" data-aos="fade-up" data-aos-delay="600">
+                    Více info
+                </a>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+            <img src="img/realizace/parkhotel.jpg" class="img-fluid full-screen-img" alt="Flutter mobilní aplikace">
+            <div class="overlay">
+                <h3 class="animate__animated" data-aos="fade-up" data-aos-delay="000">Stavba 3</h3>
+                <p class="animate__animated" data-aos="fade-up" data-aos-delay="200">
+                    Něco k tomu.
+                </p>
+                <a href="#" class="btn btn-primary mt-2 animate__animated" data-aos="fade-up" data-aos-delay="600">
+                    Více info
+                </a>
+            </div>
+        </div>
+
     </div>
+
+    <!-- Ovládací šipky -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <!-- Paginační tečky -->
+    <div class="swiper-pagination"></div>
+</div>
+
+
     <!--------------------------------------------------------- Carousel END -------------------------------------------------------->
 
     <!--------------------------------------------------------- Sections START ------------------------------------------------------>
@@ -140,7 +178,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
     <!-- Lokální JS pro navbar -->
+    <script src="js/main.js"></script>
+
     <script src="js/sitesJS/navbar.js"></script>
+    <script src="js/sitesJS/carousel.js"></script>
     <!--------------------------------------------------------- JS soubory END ------------------------------------------------------>
 
 </body>
