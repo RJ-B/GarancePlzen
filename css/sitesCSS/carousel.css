@@ -1,0 +1,12 @@
+/* Celý carousel zabírá celou obrazovku */
+.swiper {
+    width: 100vw;  /* 100% šířky obrazovky */
+    height: 100vh; /* 100% výšky obrazovky */
+}
+
+/* Obrázky se přizpůsobí kontejneru a nebudou deformované */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ořízne obrázek tak, aby vyplnil celý prostor */
+}
