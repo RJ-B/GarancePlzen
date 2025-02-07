@@ -1,0 +1,77 @@
+/* Fixní navbar s přechodem */
+.navbar {
+    transition: top 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín */
+}
+
+/* Bootstrap standardně neanimuje otevření navbaru – přidáme smooth efekt */
+.navbar-collapse {
+    transition: height 0.35s ease-out, opacity 0.35s ease-out !important;
+}
+
+/* Oprava Bootstrap chování při zavírání */
+.navbar-collapse.collapsing {
+    height: 0 !important;
+    opacity: 0;
+}
+
+/* Animace pro jednotlivé odkazy v navbaru */
+.navbar-nav .nav-item {
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* Po zobrazení navbaru se odkazy postupně ukážou */
+.navbar-collapse.show .nav-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 🔹 Přidání efektu postupného zobrazování */
+.navbar-collapse.show .nav-item:nth-child(1) { transition-delay: 0.1s; }
+.navbar-collapse.show .nav-item:nth-child(2) { transition-delay: 0.2s; }
+.navbar-collapse.show .nav-item:nth-child(3) { transition-delay: 0.3s; }
+.navbar-collapse.show .nav-item:nth-child(4) { transition-delay: 0.4s; }
+.navbar-collapse.show .nav-item:nth-child(5) { transition-delay: 0.5s; }
+
+/* 🔹 Styl tlačítka pro rozbalení navbaru */
+.navbar-toggler {
+    border: none;
+    outline: none;
+    padding: 8px 10px;
+}
+
+/* 🔹 Odkazy v navbaru */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* 🔹 Hover efekt pro odkazy */
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Modrá Bootstrap barva */
+}
+
+/* 🔹 Navbar na mobilu – zajistí, že se menu správně zobrazuje */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+}

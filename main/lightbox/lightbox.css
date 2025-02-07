@@ -1,0 +1,111 @@
+/* Lightbox celé obrazovky */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Aktivní lightbox */
+.lightbox-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Kontejner pro obrázek */
+.lightbox-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+/* Obrázek v lightboxu s animací */
+#lightboxImage {
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Přechodná třída pro animaci */
+#lightboxImage.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zavírací tlačítko */
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: var(--light); /* Použití žluté barvy */
+    cursor: pointer;
+    background: rgba(29, 25, 25, 0.39);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* Při hoveru změníme barvu na `--secondary` (modrá) */
+.lightbox-close:hover {
+    background: var(--dark);
+    color: red;
+}
+
+
+/* Šipky pro přepínání obrázků */
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(29, 25, 25, 0.39);
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--primary); /* Použití žluté barvy */
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Při hoveru změníme barvu na `--secondary` (modrá) */
+.lightbox-prev:hover, .lightbox-next:hover {
+    background: var(--secondary);
+    color: var(--light);
+}
+
+/* Umístění tlačítka zpět */
+.lightbox-prev {
+    left: 10px;
+}
+
+/* Umístění tlačítka dopředu */
+.lightbox-next {
+    right: 10px;
+}

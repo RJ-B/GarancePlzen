@@ -1,0 +1,79 @@
+/* Swiper container zabírá celou obrazovku */
+.swiper-container {
+    width: 100vw;
+    height: calc(100vh - 70px); /* Dynamicky nastavena výška */
+    perspective: 1200px; /* Přidává efekt hloubky pro 3D */
+}
+
+/* Swiper slide – 3D kostkový efekt */
+.swiper-slide {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center center;
+}
+
+/* Obrázky jsou přes celou obrazovku bez přesahu */
+.full-screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pokryje celou oblast bez deformace */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 1s ease-in-out; /* Plynulý přechod pro 3D efekt */
+}
+
+/* Overlay umístěný přesně doprostřed */
+.overlay {
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--light);
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    width: 60%;
+    max-width: 600px;
+    opacity: 0;
+    transform-origin: center;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+}
+
+/* Animace při aktivním slide */
+.swiper-slide-active .overlay {
+    opacity: 1;
+}
+
+
+/* Styl pro nadpisy */
+.overlay h3 {
+    font-family: var(--font-primary);
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+/* Styl pro text */
+.overlay p {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+}
+
+/* Styl pro tlačítko */
+.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Aktivace animace při změně slide */
+.swiper-slide-active .overlay {
+    opacity: 1;
+    transform: scale(1);
+}

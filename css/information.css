@@ -1,0 +1,25 @@
+/* Základní styl karty */
+.card {
+    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný základní stín */
+    will-change: transform, box-shadow; /* Lepší výkon */
+}
+
+/* Při najetí myší se karta plynule posune nahoru a přidá se stín */
+.card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Správné měřítko obrázků */
+.card-img-top {
+    height: 200px; /* Menší obrázky */
+    object-fit: cover;
+}
+
+/* Zmenšení kontejnerů */
+@media (min-width: 768px) {
+    .col-md-4 {
+        max-width: 30%; /* Snížení šířky pro lepší poměr */
+    }
+}

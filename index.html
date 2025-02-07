@@ -7,6 +7,9 @@
 
     <!--------------------------------------------------------- CSS soubory START --------------------------------------------------->
     
+    <!-- Ikony navbar -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    
     <!-- Fonty písma -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -25,11 +28,18 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
-    <!-- Lokální CSS soubory --------->
-    <link href="css/style.css" rel="stylesheet">
+    <!-- Lightbox2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 
-    <link rel="stylesheet" href="css/sitesCSS/navbar.css">
-    <link rel="stylesheet" href="css/sitesCSS/carousel.css">
+
+    <!-- Lokální CSS soubory --------->
+    <link href="main/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/information.css">
+    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="main/lightbox/lightbox.css">
 
     <!--------------------------------------------------------- CSS soubory END ----------------------------------------------------->
 </head>
@@ -40,33 +50,37 @@
     <!--------------------------------------------------------- Spinner End --------------------------------------------------------->
 
     <!--------------------------------------------------------- Navbar START -------------------------------------------------------->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Garance Plzeň" height="40">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow-sm">
+        <div class="container-fluid">
+            <!-- Logo vlevo -->
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img class="img-fluid me-3" src="img/icon/icon-02-primary.png" alt="" style="max-height: 50px;">
+                <span class="fw-bold fs-3">GARANCE Plzeň</span>
             </a>
     
-            <!-- Tlačítko pro mobilní menu -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Tlačítko pro otevření/zavření na mobilu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <!-- Odkazy -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+            <!-- Navigační menu -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#home">Domů</a>
+                        <a href="#Home" class="nav-link"><i class="fas fa-home me-1"></i> Domů</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Služby</a>
+                        <a href="#services" class="nav-link"><i class="fas fa-info-circle me-1"></i> O nás</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projekty</a>
+                        <a href="#Categories" class="nav-link"><i class="fas fa-box-open me-1"></i> Produkty</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Kontakt</a>
+                        <a href="#Projekty" class="nav-link"><i class="fas fa-project-diagram me-1"></i> Projekty</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#Contact" class="nav-link"><i class="fas fa-envelope me-1"></i> Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -134,9 +148,197 @@
 
     <!--------------------------------------------------------- Carousel END -------------------------------------------------------->
 
-    <!--------------------------------------------------------- Sections START ------------------------------------------------------>
+    
+    <!--------------------------------------------------------- Information START --------------------------------------------------->
+    <div id="services" class="py-5 text-dark text-center my-5">
+        <div class="container">
+            <h2 class="mb-4 fw-bold">Co firma dělá</h2>
+            <div class="row g-4 justify-content-center">
+                <!-- Paneláky -->
+                <div class="col-md-4">
+                    <div class="card border-0 p-3" data-aos="fade-up">
+                        <img src="img/realizace/plochestrechy.png" class="card-img-top rounded" alt="Paneláky">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-primary">
+                                <i class="bi bi-building me-2"></i> Paneláky
+                            </h4>
+                            <p class="text-muted">
+                                Stavíme a rekonstruujeme bytové domy s důrazem na moderní technologie a energetickou úsporu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Haly -->
+                <div class="col-md-4">
+                    <div class="card border-0 p-3" data-aos="fade-up" data-aos-delay="200">
+                        <img src="img/informace/uno.jpg" class="card-img-top rounded" alt="Haly">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-primary">
+                                <i class="bi bi-shop me-2"></i> Haly
+                            </h4>
+                            <p class="text-muted">
+                                Specializujeme se na stavbu průmyslových a skladových hal s vysokou odolností a efektivitou.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Rodinné domy -->
+                <div class="col-md-4">
+                    <div class="card border-0 p-3" data-aos="fade-up" data-aos-delay="400">
+                        <img src="img/informace/rodum.jpg" class="card-img-top rounded" alt="Rodinné domy">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-primary">
+                                <i class="bi bi-house-door me-2"></i> Rodinné domy
+                            </h4>
+                            <p class="text-muted">
+                                Nabízíme kompletní realizaci rodinných domů od návrhu po finální stavbu, včetně moderních úprav interiéru.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <!--------------------------------------------------------- Information END ----------------------------------------------------->
 
-    <!--------------------------------------------------------- Sections END -------------------------------------------------------->
+    <!--------------------------------------------------------- Facts START --------------------------------------------------------->
+    <div id="stats-section" class="stats-bar py-5 bg-light">
+        <div class="container">
+            <div class="row text-center gy-4">
+                <!-- Novostavby -->
+                <div class="col-md-4">
+                    <div class="stats-box p-3 rounded bg-white d-flex flex-column align-items-center">
+                        <div class="icon-box mb-3"></div>
+                        <h3 class="counter display-6 fw-bold text-primary" data-target="120">0</h3>
+                        <button class="btn btn-primary btn-sm mt-2">
+                            Novostavby
+                        </button>
+                    </div>
+                </div>
+                <!-- Opravy -->
+                <div class="col-md-4">
+                    <div class="stats-box p-3 rounded bg-white d-flex flex-column align-items-center">
+                        <div class="icon-box mb-3"></div>
+                        <h3 class="counter display-6 fw-bold text-primary" data-target="250">0</h3>
+                        <button class="btn btn-primary btn-sm mt-2">
+                            Rekonstrukce a opravy
+                        </button>
+                    </div>
+                </div>
+                <!-- Certifikáty -->
+                <div class="col-md-4">
+                    <div class="stats-box p-3 rounded bg-white d-flex flex-column align-items-center">
+                        <div class="icon-box mb-3"></div>
+                        <h3 class="counter display-6 fw-bold text-primary" data-target="15">0</h3>
+                        <button class="btn btn-primary btn-sm mt-2">
+                            Certifikáty
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    <!--------------------------------------------------------- Facts END ----------------------------------------------------------->
+
+    <!--------------------------------------------------------- Timeline START ------------------------------------------------------>
+
+    <div id="timeline-section" class="py-5 bg-light">
+        <div class="container timeline-try">
+            <h2 class="text-center mb-4 fw-bold">Vývoj naší firmy</h2>
+            <div class="row timeline-try">
+                <!-- Levá část -->
+                <div class="col-md-5">
+                    <div class="info-container">
+                        <h4>Začátky</h4>
+                        <p>Firma vznikla v roce 2000 se specializací na stavby střech.</p>
+                    </div>
+                    <div class="info-container">
+                        <h4>Rozšíření</h4>
+                        <p>V roce 2005 jsme přidali rekonstrukce budov.</p>
+                    </div>
+                </div>
+    
+                <!-- Střední část - Časová osa -->
+                <div class="col-md-2 position-relative">
+                    <div class="timeline-wrapper">
+                        <div class="timeline-container">
+
+                            <div class="timeline-line-hor"></div>
+                            <div class="timeline-line-ver"></div>
+                            <div class="timeline-dot"></div>
+
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline-line-hor"></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line-ver"></div>
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline-line-hor"></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line-ver"></div>
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline-line-hor"></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line-ver"></div>
+                        </div>
+                        <div class="timeline-container">
+                            <div class="timeline-line-hor"></div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-line-ver"></div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Pravá část -->
+                <div class="col-md-5">
+                    <div class="info-container">
+                        <h4>Certifikace</h4>
+                        <p>V roce 2010 jsme získali certifikace ISO.</p>
+                    </div>
+                    <div class="info-container">
+                        <h4>Moderní technologie</h4>
+                        <p>Od roku 2020 investujeme do ekologických řešení.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <!--------------------------------------------------------- Timeline END -------------------------------------------------------->
+
+
+    <!--------------------------------------------------------- Lightbox START ------------------------------------------------------>
+    <div id="fullscreenLightbox" class="lightbox-overlay">
+        <div class="lightbox-content">
+            <a href="#" id="lightboxLink" data-lightbox="gallery">
+                <img id="lightboxImage" src="" alt="Lightbox Image">
+            </a>
+            <button class="lightbox-prev">&#10094;</button>
+            <button class="lightbox-next">&#10095;</button>
+            <button class="lightbox-close">&times;</button>
+        </div>
+    </div>    
+    <!--------------------------------------------------------- Lightbox END -------------------------------------------------------->
 
     <!--------------------------------------------------------- Footer START -------------------------------------------------------->
 
@@ -177,11 +379,19 @@
     <!-- Lodash -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
-    <!-- Lokální JS pro navbar -->
-    <script src="js/main.js"></script>
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-    <script src="js/sitesJS/navbar.js"></script>
-    <script src="js/sitesJS/carousel.js"></script>
+    <!-- Lokální JS pro navbar -->
+    <script src="main/main.js"></script>
+
+    <script src="js/navbar.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/facts.js"></script>
+    <script src="js/information.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="main/lightbox/lightbox.js"></script>
+
     <!--------------------------------------------------------- JS soubory END ------------------------------------------------------>
 
 </body>

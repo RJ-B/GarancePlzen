@@ -1,0 +1,169 @@
+.timeline-try {
+    height: 1000px;
+}
+
+
+/* Sekce časové osy */
+#timeline-section {
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+/* Střední část s timeline */
+.timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* Každý jednotlivý kontejner */
+.timeline-container {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Čára časové osy */
+.timeline-line-hor {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: var(--dark);
+    transform: translateX(-50%);
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 1.5s ease-in-out;
+}
+
+
+/* Aktivní animace odkrývání shora dolů */
+.timeline-line-hor.active {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Obecná stylizace vertikální čáry */
+.timeline-line-ver {
+    position: absolute;
+    bottom: 50%;
+    width: 50%; /* Poloviční šířka, aby měla kam růst */
+    height: 4px;
+    background-color: var(--dark);
+    transition: transform 0.5s ease-in-out 0.5s; /* Po horizontální čáře */
+}
+
+/* Sudé kontejnery - čára vpravo, animace zleva doprava */
+.timeline-container:nth-child(even) .timeline-line-ver {
+    left: 50%;
+    transform-origin: left; /* Růst zleva */
+    transform: scaleX(0);
+}
+
+.timeline-container:nth-child(even) .timeline-line-ver.active {
+    transform: scaleX(1);
+}
+
+/* Liché kontejnery - čára vlevo, animace zprava doleva */
+.timeline-container:nth-child(odd) .timeline-line-ver {
+    right: 50%;
+    transform-origin: right; /* Růst zprava */
+    transform: scaleX(0);
+}
+
+.timeline-container:nth-child(odd) .timeline-line-ver.active {
+    transform: scaleX(1);
+}
+
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+
+
+
+
+/* Hlavní kontejner pro informace */
+.info-container {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover efekt pro informační kontejnery */
+.info-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Události */
+.timeline-item {
+    position: relative;
+    width: 45%;
+    margin: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-in-out;
+}
+
+/* Levá strana */
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+/* Pravá strana */
+.timeline-item.right {
+    right: 0;
+    text-align: left;
+}
+
+/* Obsah každé události */
+.timeline-content {
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Spojovací body */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 3px solid var(--light);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 3;
+}
+
+/* Levé body */
+.timeline-item.left::before {
+    right: -15px;
+}
+
+/* Pravé body */
+.timeline-item.right::before {
+    left: -15px;
+}
+
+/* Aktivní události */
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
