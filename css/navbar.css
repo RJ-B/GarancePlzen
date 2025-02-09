@@ -1,50 +1,25 @@
-/* Fixní navbar s přechodem */
+/* 🔹 Fixní navbar s přechodem */
 .navbar {
     transition: top 0.3s ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Jemný stín */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
-/* Bootstrap standardně neanimuje otevření navbaru – přidáme smooth efekt */
-.navbar-collapse {
-    transition: height 0.35s ease-out, opacity 0.35s ease-out !important;
+/* 🔹 Transparentní a rozmazané pozadí */
+.myNavbar {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px) !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* Oprava Bootstrap chování při zavírání */
-.navbar-collapse.collapsing {
-    height: 0 !important;
-    opacity: 0;
-}
-
-/* Animace pro jednotlivé odkazy v navbaru */
-.navbar-nav .nav-item {
-    opacity: 0;
-    transform: translateY(-15px);
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-}
-
-/* Po zobrazení navbaru se odkazy postupně ukážou */
-.navbar-collapse.show .nav-item {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* 🔹 Přidání efektu postupného zobrazování */
-.navbar-collapse.show .nav-item:nth-child(1) { transition-delay: 0.1s; }
-.navbar-collapse.show .nav-item:nth-child(2) { transition-delay: 0.2s; }
-.navbar-collapse.show .nav-item:nth-child(3) { transition-delay: 0.3s; }
-.navbar-collapse.show .nav-item:nth-child(4) { transition-delay: 0.4s; }
-.navbar-collapse.show .nav-item:nth-child(5) { transition-delay: 0.5s; }
-
-/* 🔹 Styl tlačítka pro rozbalení navbaru */
-.navbar-toggler {
-    border: none;
-    outline: none;
-    padding: 8px 10px;
-}
-
-/* 🔹 Odkazy v navbaru */
+/* 🔹 Navbar odkazy */
 .navbar-nav .nav-link {
     font-weight: 500;
+    color: var(--light);
     padding: 10px 15px;
     transition: color 0.3s ease-in-out;
 }
@@ -54,15 +29,35 @@
     color: #007bff; /* Modrá Bootstrap barva */
 }
 
+/* 🔹 Vlnová animace pro navbar */
+@keyframes firstShow {
+  0%, 100% {
+    transform: perspective(1000px) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: perspective(1000px) translate3d(0, 0, 3em); /* Vyjede dopředu */
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* 🔹 Navbar na mobilu – zajistí, že se menu správně zobrazuje */
 @media (max-width: 991.98px) {
     .navbar-collapse {
+        background: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(10px) !important;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2) !important;
         position: absolute;
         top: 100%;
         left: 0;
         width: 100%;
-        background-color: white;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         padding: 10px 0;
     }
@@ -71,7 +66,59 @@
         text-align: center;
     }
 
+    /* 🔹 Přidání stejného pozadí pro všechny prvky */
+    .nav-item {
+        background: rgba(255, 255, 255, 0.1); /* Stejné jako navbar */
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        padding: 10px 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stín pro lepší efekt */
+        margin: 5px 0; /* Odstup mezi prvky */
+    }
+
+    .nav-link {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        background: transparent; /* Transparentní pro zachování efektu */
+        color: var(--light);
+        text-align: center;
+    }
+
+    .nav-link:hover {
+        background: rgba(255, 255, 255, 0.2); /* Mírně světlejší hover efekt */
+    }
+
     .navbar-nav .nav-item {
         margin-bottom: 10px;
+        opacity: 0; /* Skryjeme prvky, aby se objevily animací */
+        animation: show 0.5s ease forwards;
+        transform-origin: center;
+    }
+
+    /* 🔹 Každý prvek menu dostane vlnovou animaci */
+    .navbar-nav .nav-item:nth-child(1) {
+        animation: firstShow 0.6s ease forwards, show 0.5s ease forwards;
+        animation-delay: 0.1s;
+    }
+
+    .navbar-nav .nav-item:nth-child(2) {
+        animation: firstShow 0.6s ease forwards, show 0.5s ease forwards;
+        animation-delay: 0.2s;
+    }
+
+    .navbar-nav .nav-item:nth-child(3) {
+        animation: firstShow 0.6s ease forwards, show 0.5s ease forwards;
+        animation-delay: 0.3s;
+    }
+
+    .navbar-nav .nav-item:nth-child(4) {
+        animation: firstShow 0.6s ease forwards, show 0.5s ease forwards;
+        animation-delay: 0.4s;
+    }
+
+    .navbar-nav .nav-item:nth-child(5) {
+        animation: firstShow 0.6s ease forwards, show 0.5s ease forwards;
+        animation-delay: 0.5s;
     }
 }

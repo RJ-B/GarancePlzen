@@ -1,25 +1,36 @@
-/* Základní styl karty */
 .card {
-    transition: transform 0.5s ease-out, box-shadow 0.5s ease-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný základní stín */
-    will-change: transform, box-shadow; /* Lepší výkon */
+    position: relative;
+    display: block;
+    overflow: hidden;
+    transition: box-shadow 0.5s ease-in-out;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
 
-/* Při najetí myší se karta plynule posune nahoru a přidá se stín */
-.card:hover {
-    transform: translateY(-10px) !important;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+/* Přidání světelného efektu na hover */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    left: 100%;
 }
 
 /* Správné měřítko obrázků */
 .card-img-top {
     height: 200px; /* Menší obrázky */
     object-fit: cover;
-}
-
-/* Zmenšení kontejnerů */
-@media (min-width: 768px) {
-    .col-md-4 {
-        max-width: 30%; /* Snížení šířky pro lepší poměr */
-    }
 }

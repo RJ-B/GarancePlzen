@@ -1,0 +1,40 @@
+/* FOOTER */
+.footer {
+    background-color: #121212; /* Jemná tmavá místo černé */
+    color: #FFFFFF;
+}
+
+/* Nadpisy */
+.footer-title {
+    color: #FFFF45;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Odkazy ve footeru */
+.footer-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-link:hover {
+    color: #FFFF45;
+}
+
+/* Ikony sociálních sítí */
+.social-icon {
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+    color: #008CFF;
+    transform: scale(1.2);
+}
+
+/* Copyright */
+.footer-copyright {
+    font-size: 0.9rem;
+}

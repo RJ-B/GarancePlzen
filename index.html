@@ -9,6 +9,9 @@
     
     <!-- Ikony navbar -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Font Awesome pro ikony -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Fonty písma -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -31,7 +34,6 @@
     <!-- Lightbox2 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 
-
     <!-- Lokální CSS soubory --------->
     <link href="main/style.css" rel="stylesheet">
 
@@ -40,6 +42,9 @@
     <link rel="stylesheet" href="css/information.css">
     <link rel="stylesheet" href="css/timeline.css">
     <link rel="stylesheet" href="main/lightbox/lightbox.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/test.css">
+
 
     <!--------------------------------------------------------- CSS soubory END ----------------------------------------------------->
 </head>
@@ -50,7 +55,7 @@
     <!--------------------------------------------------------- Spinner End --------------------------------------------------------->
 
     <!--------------------------------------------------------- Navbar START -------------------------------------------------------->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm myNavbar" data-aos="fade-down">
         <div class="container-fluid">
             <!-- Logo vlevo -->
             <a href="index.html" class="navbar-brand d-flex align-items-center">
@@ -67,25 +72,26 @@
             <!-- Navigační menu -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
                 <ul class="navbar-nav mb-2 mb-lg-0">
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="zoom-out-down" data-aos-delay="100" data-aos-duration="2000">
                         <a href="#Home" class="nav-link"><i class="fas fa-home me-1"></i> Domů</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="zoom-out-down" data-aos-delay="200">
                         <a href="#services" class="nav-link"><i class="fas fa-info-circle me-1"></i> O nás</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="zoom-out-down" data-aos-delay="300">
                         <a href="#Categories" class="nav-link"><i class="fas fa-box-open me-1"></i> Produkty</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="zoom-out-down" data-aos-delay="400">
                         <a href="#Projekty" class="nav-link"><i class="fas fa-project-diagram me-1"></i> Projekty</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" data-aos="zoom-out-down" data-aos-delay="500">
                         <a href="#Contact" class="nav-link"><i class="fas fa-envelope me-1"></i> Kontakt</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
     <!--------------------------------------------------------- Navbar END ---------------------------------------------------------->
 
     <!--------------------------------------------------------- Carousel START ------------------------------------------------------>
@@ -154,15 +160,16 @@
         <div class="container">
             <h2 class="mb-4 fw-bold">Co firma dělá</h2>
             <div class="row g-4 justify-content-center">
+    
                 <!-- Paneláky -->
                 <div class="col-md-4">
-                    <div class="card border-0 p-3" data-aos="fade-up">
+                    <div class="card border-0 p-3 test" data-aos="fade-up">
                         <img src="img/realizace/plochestrechy.png" class="card-img-top rounded" alt="Paneláky">
                         <div class="card-body">
-                            <h4 class="fw-bold text-primary">
+                            <h4 class="fw-bold text-light">
                                 <i class="bi bi-building me-2"></i> Paneláky
                             </h4>
-                            <p class="text-muted">
+                            <p class="text-light">
                                 Stavíme a rekonstruujeme bytové domy s důrazem na moderní technologie a energetickou úsporu.
                             </p>
                         </div>
@@ -171,13 +178,13 @@
     
                 <!-- Haly -->
                 <div class="col-md-4">
-                    <div class="card border-0 p-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 p-3 test" data-aos="fade-up" data-aos-delay="200">
                         <img src="img/informace/uno.jpg" class="card-img-top rounded" alt="Haly">
                         <div class="card-body">
-                            <h4 class="fw-bold text-primary">
+                            <h4 class="fw-bold text-light">
                                 <i class="bi bi-shop me-2"></i> Haly
                             </h4>
-                            <p class="text-muted">
+                            <p class="text-light">
                                 Specializujeme se na stavbu průmyslových a skladových hal s vysokou odolností a efektivitou.
                             </p>
                         </div>
@@ -189,31 +196,31 @@
                     <div class="card border-0 p-3" data-aos="fade-up" data-aos-delay="400">
                         <img src="img/informace/rodum.jpg" class="card-img-top rounded" alt="Rodinné domy">
                         <div class="card-body">
-                            <h4 class="fw-bold text-primary">
+                            <h4 class="fw-bold text-light">
                                 <i class="bi bi-house-door me-2"></i> Rodinné domy
                             </h4>
-                            <p class="text-muted">
+                            <p class="text-light">
                                 Nabízíme kompletní realizaci rodinných domů od návrhu po finální stavbu, včetně moderních úprav interiéru.
                             </p>
                         </div>
                     </div>
                 </div>
+    
             </div>
         </div>
     </div>
     
     
     
-    
     <!--------------------------------------------------------- Information END ----------------------------------------------------->
 
     <!--------------------------------------------------------- Facts START --------------------------------------------------------->
-    <div id="stats-section" class="stats-bar py-5 bg-light">
+    <div id="stats-section" class="stats-bar py-5 glass-bg">
         <div class="container">
             <div class="row text-center gy-4">
                 <!-- Novostavby -->
                 <div class="col-md-4">
-                    <div class="stats-box p-3 rounded bg-white d-flex flex-column align-items-center">
+                    <div class="stats-box p-3 rounded d-flex flex-column align-items-center">
                         <div class="icon-box mb-3"></div>
                         <h3 class="counter display-6 fw-bold text-primary" data-target="120">0</h3>
                         <button class="btn btn-primary btn-sm mt-2">
@@ -223,7 +230,7 @@
                 </div>
                 <!-- Opravy -->
                 <div class="col-md-4">
-                    <div class="stats-box p-3 rounded bg-white d-flex flex-column align-items-center">
+                    <div class="stats-box p-3 rounded d-flex flex-column align-items-center">
                         <div class="icon-box mb-3"></div>
                         <h3 class="counter display-6 fw-bold text-primary" data-target="250">0</h3>
                         <button class="btn btn-primary btn-sm mt-2">
@@ -233,7 +240,7 @@
                 </div>
                 <!-- Certifikáty -->
                 <div class="col-md-4">
-                    <div class="stats-box p-3 rounded bg-white d-flex flex-column align-items-center">
+                    <div class="stats-box p-3 rounded d-flex flex-column align-items-center">
                         <div class="icon-box mb-3"></div>
                         <h3 class="counter display-6 fw-bold text-primary" data-target="15">0</h3>
                         <button class="btn btn-primary btn-sm mt-2">
@@ -254,7 +261,7 @@
 
     <!--------------------------------------------------------- Timeline START ------------------------------------------------------>
 
-    <div id="timeline-section" class="py-5 bg-light">
+    <div id="timeline-section" class="py-5">
         <div class="container timeline-try">
             <h2 class="text-center mb-4 fw-bold">Vývoj naší firmy</h2>
             <div class="row timeline-try">
@@ -341,21 +348,45 @@
     <!--------------------------------------------------------- Lightbox END -------------------------------------------------------->
 
     <!--------------------------------------------------------- Footer START -------------------------------------------------------->
-
-        <!-- Spodní část s copyrightem -->
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                        &copy; <a href="#">rootklima.cz</a>, Všechna práva vyhrazena.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        Vytvořeno <a href="#">RJ Web</a>
+    <footer class="footer py-5" id="footer">
+        <div class="container">
+            <div class="row text-center text-md-start">
+                <!-- Logo a Popis -->
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <h5 class="footer-title">Garance Plzeň</h5>
+                    <p class="footer-text">Stavební firma se zaměřením na kvalitu a preciznost. Realizujeme projekty na míru.</p>
+                </div>
+    
+                <!-- Rychlé odkazy -->
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="footer-title">Rychlé odkazy</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">O nás</a></li>
+                        <li><a href="#" class="footer-link">Naše služby</a></li>
+                        <li><a href="#" class="footer-link">Reference</a></li>
+                        <li><a href="#" class="footer-link">Kontakt</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Sociální sítě -->
+                <div class="col-md-4 mb-4 text-md-end" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="footer-title">Sledujte nás</h5>
+                    <div class="d-flex justify-content-center justify-content-md-end gap-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
+    
+            <!-- Copyright -->
+            <div class="text-center mt-4">
+                <p class="footer-copyright">© 2024 Garance Plzeň | Všechna práva vyhrazena.</p>
+            </div>
         </div>
-    </div>
+    </footer>    
+    
     <!--------------------------------------------------------- Footer END ---------------------------------------------------------->
 
 
@@ -391,6 +422,8 @@
     <script src="js/information.js"></script>
     <script src="js/timeline.js"></script>
     <script src="main/lightbox/lightbox.js"></script>
+    <script src="js/footer.js"></script>
+
 
     <!--------------------------------------------------------- JS soubory END ------------------------------------------------------>
 
