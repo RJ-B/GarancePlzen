@@ -7,20 +7,20 @@
 
 /* Box pro každou statistiku */
 .stats-box {
-    background: transparent;
     display: flex;
-    align-items: center;
-    justify-content: start;
-    text-align: left;
-    padding: 10px;
+    align-items: center; /* Vertikální zarovnání obsahu */
+    justify-content: start; /* Ikona vlevo, text vpravo */
+    text-align: left; /* Zarovnání textu na levou stranu */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 /* Ikona */
-.icon-img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain; /* Zachování proporcí */
-    flex-shrink: 0;
+.icon-animation {
+    width: 60px; /* Velikost ikony */
+    height: 60px;
+    object-fit: contain; /* Zachování proporcí obrázku */
+    flex-shrink: 0; /* Zabraňuje deformaci */
+    margin-right: 15px; /* Mezera mezi ikonou a textem */
 }
 
 /* Číselná statistika */
@@ -40,14 +40,14 @@
 
 /* Responzivní úpravy */
 @media (max-width: 768px) {
-    .icon-img {
-        width: 40px;
-        height: 40px;
+    .icon-animation {
+        width: 50px;
+        height: 50px;
     }
     .counter {
         font-size: 1.8rem;
     }
     .stats-box {
-        padding: 5px;
+        padding: 10px 15px;
     }
 }
