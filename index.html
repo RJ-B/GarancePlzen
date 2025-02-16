@@ -37,6 +37,7 @@
     <!-- Lokální CSS soubory --------->
     <link href="main/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="css/information.css">
@@ -50,9 +51,16 @@
 </head>
 
 <body>
-    <!--------------------------------------------------------- Spinner Start ------------------------------------------------------->
-
-    <!--------------------------------------------------------- Spinner End --------------------------------------------------------->
+    <!--------------------------------------------------------- Preloader Start ----------------------------------------------------->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="roof"></div>
+            <div class="walls"></div>
+            <div class="door"></div>
+            <div class="shadow"></div>
+        </div>
+    </div>
+    <!--------------------------------------------------------- Preloader End ------------------------------------------------------->
 
     <!--------------------------------------------------------- Navbar START -------------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm myNavbar" data-aos="fade-down">
@@ -62,12 +70,32 @@
                 <img class="img-fluid me-3" src="img/icon/icon-02-primary.png" alt="" style="max-height: 50px;">
                 <span class="fw-bold fs-3">GARANCE Plzeň</span>
             </a>
-    
-            <!-- Tlačítko pro otevření/zavření na mobilu -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+
+                    <!-- Custom toggle button -->
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <svg class="burger-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"
+            stroke="#eee" stroke-width=".6" fill="rgba(0,0,0,0)" stroke-linecap="round">
+            <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                <animate dur="0.2s" attributeName="d"
+                    values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7"
+                    fill="freeze" begin="start.begin" />
+                <animate dur="0.2s" attributeName="d"
+                    values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7"
+                    fill="freeze" begin="reverse.begin" />
+            </path>
+            <rect width="10" height="10" stroke="none">
+                <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+            </rect>
+            <rect width="10" height="10" stroke="none">
+                <animate dur="0.001s" id="start" attributeName="width"
+                    values="10;0" fill="freeze" begin="click" />
+                <animate dur="0.001s" attributeName="width"
+                    values="0;10" fill="freeze" begin="reverse.begin" />
+            </rect>
+        </svg>
+    </button>
     
             <!-- Navigační menu -->
             <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
@@ -154,17 +182,19 @@
 
     <!--------------------------------------------------------- Carousel END -------------------------------------------------------->
 
-    
+
     <!--------------------------------------------------------- Information START --------------------------------------------------->
     <div id="services" class="py-5 text-dark text-center my-5">
         <div class="container">
-            <h2 class="mb-4 fw-bold">Co firma dělá</h2>
+            <h2 class="mb-4 fw-bold text-light">Co firma dělá</h2>
             <div class="row g-4 justify-content-center">
     
                 <!-- Paneláky -->
                 <div class="col-md-4">
                     <div class="card border-0 p-3 test" data-aos="fade-up">
-                        <img src="img/realizace/plochestrechy.png" class="card-img-top rounded" alt="Paneláky">
+                        <div class="model-wrapper">
+                            <div id="model-container-1"></div>
+                        </div>
                         <div class="card-body">
                             <h4 class="fw-bold text-light">
                                 <i class="bi bi-building me-2"></i> Paneláky
@@ -179,7 +209,9 @@
                 <!-- Haly -->
                 <div class="col-md-4">
                     <div class="card border-0 p-3 test" data-aos="fade-up" data-aos-delay="200">
-                        <img src="img/informace/uno.jpg" class="card-img-top rounded" alt="Haly">
+                        <div class="model-wrapper">
+                            <div id="model-container-2"></div>
+                        </div>
                         <div class="card-body">
                             <h4 class="fw-bold text-light">
                                 <i class="bi bi-shop me-2"></i> Haly
@@ -193,18 +225,21 @@
     
                 <!-- Rodinné domy -->
                 <div class="col-md-4">
-                    <div class="card border-0 p-3" data-aos="fade-up" data-aos-delay="400">
-                        <img src="img/informace/rodum.jpg" class="card-img-top rounded" alt="Rodinné domy">
-                        <div class="card-body">
-                            <h4 class="fw-bold text-light">
+                    <div class="card border-0 p-3 text-light" data-aos="fade-up" data-aos-delay="400">
+                        <div class="model-wrapper">
+                            <div id="model-container-3"></div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h4 class="fw-bold">
                                 <i class="bi bi-house-door me-2"></i> Rodinné domy
                             </h4>
-                            <p class="text-light">
+                            <p>
                                 Nabízíme kompletní realizaci rodinných domů od návrhu po finální stavbu, včetně moderních úprav interiéru.
                             </p>
                         </div>
                     </div>
                 </div>
+
     
             </div>
         </div>
@@ -405,8 +440,11 @@
 
 
     <!--------------------------------------------------------- Back to Top --------------------------------------------------------->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/loaders/MTLLoader.js"></script>
+    <script src="js/model.js"></script>
+    
 
     <!--------------------------------------------------------- JS soubory START ---------------------------------------------------->
     <!-- Bootstrap JS Bundle -->
@@ -430,6 +468,7 @@
     <!-- Lokální JS pro navbar -->
     <script src="main/main.js"></script>
 
+    <script src="js/preloader.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/facts.js"></script>

@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     initializeStickyNavbar();
     initializeMobileNavBehavior();
+    initializeBurgerMenu();
 
     function initializeStickyNavbar() {
         const navbar = document.querySelector('.navbar');
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function initializeMobileNavBehavior() {
-        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarToggler = document.querySelector('.custom-toggler');
         const navbarCollapse = document.getElementById('navbarCollapse');
         const navItems = document.querySelectorAll('.navbar-nav .nav-item');
 
@@ -47,6 +48,18 @@ document.addEventListener('DOMContentLoaded', function () {
                     navbarToggler.click();
                 }
             });
+        });
+    }
+
+    function initializeBurgerMenu() {
+        const navbarToggler = document.querySelector('.custom-toggler');
+
+        if (!navbarToggler) return;
+
+        // Přidání animace burger menu při kliknutí
+        navbarToggler.addEventListener('click', () => {
+            const expanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+            navbarToggler.setAttribute('aria-expanded', !expanded);
         });
     }
 });
