@@ -99,5 +99,5 @@ document.addEventListener("DOMContentLoaded", function () {
             [0, 2, 0]     // Pozice, kam se kamera dívá
         );
 
-    }, 500); // Počkám 500 ms na vykreslení HTML
+    }, 1000); // Počkám 500 ms na vykreslení HTML
 });

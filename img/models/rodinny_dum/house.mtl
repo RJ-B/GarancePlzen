@@ -1,6 +1,32 @@
 # Blender 4.3.2 MTL File: 'house.blend'
 # www.blender.org
 
+newmtl Wall
+Ns 50.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.300000 0.300000 0.300000
+Ke 0.000000 0.000000 0.000000
+Ni 1.100000
+d 1.000000
+illum 2
+map_Kd textury/wall/gray-bricks1-albedo.png
+map_Ns textury/wall/gray-bricks1-ao.png
+map_Bump -bm 1.000000 textury/wall/gray-bricks1-Normal-ogl.png
+
+newmtl brick
+Ns 20.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd textury/brick/brick-wall_albedo.png
+map_Ns textury/brick/brick-wall_ao.png
+map_Bump -bm 1.000000 textury/brick/brick-wall_normal-ogl.png
+
 newmtl foundation_brown_brick
 Ns 250.000000
 Ka 1.000000 1.000000 1.000000

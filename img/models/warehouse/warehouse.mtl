@@ -11,7 +11,7 @@ Ni 1.450000
 d 1.000000
 illum 2
 
-newmtl Black_Garage_Wndow_Frame
+newmtl Black_Garage_Window_Frame
 Ns 360.000000
 Ka 1.000000 1.000000 1.000000
 Kd 0.015000 0.015000 0.015000
@@ -27,27 +27,20 @@ Kd 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
-d 1.000000  # 1.0 znamená žádnou průhlednost
-illum 1     # Použije pouze difuzní a spekulární osvětlení bez průhlednosti
+d 1.000000
+illum 1
 map_Kd texture/brick/brick-wall_albedo.png
 map_Ns texture/brick/brick-wall_ao.png
 map_Bump -bm 1.000000 texture/brick/brick-wall_normal-ogl.png
 
-
-newmtl Corrugated_PVC_Grey
+newmtl Metal_wall
 Ka 1.000000 1.000000 1.000000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd texture/wall/chipping-painted-wall_albedo.png
-map_Ns texture/wall/chipping-painted-wall_ao.png
-map_Bump -bm 1.000000 texture/wall/chipping-painted-wall_normal-ogl.png
-
-
-
-
+map_Kd texture/wall/warehouse-wall.jpg
 
 newmtl Corrugated_Plates
 Ka 1.000000 1.000000 1.000000
@@ -56,11 +49,7 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd texture/wall/worn-metal-studs_albedo.png
-map_Ns texture/wall/worn-metal-studs_ao.png
-map_Bump -bm 1.000000 texture/wall/worn-metal-studs_normal-ogl.png
-map_d texture/wall/worn-metal-studs_height.png
-
+map_Kd texture/roof/aspahl-roof.jpg
 
 newmtl Eevee_Glass
 Ns 1000.000000
@@ -74,48 +63,40 @@ illum 2
 
 newmtl Fire_Exit_Sign
 Ns 250.000000
-Ka 1.000000 1.000000 1.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.500000 0.500000 0.500000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:/Keep_Clear.jpg
 
-newmtl Flood_Lamp_2_Warm_lsrc_(30;25;20)
+newmtl Flood_Lamp_2_Warm_lsrc
 Ns 250.000000
-Ka 1.000000 1.000000 1.000000
-Kd 0.800000 0.800000 0.800000
+Ka 0.500000 0.500000 0.500000
+Kd 0.500000 0.500000 0.500000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Bump -bm 1.000000 C:/prg_flood_lamp_2_normal.png
 
 newmtl Garage_Pole
-Ka 1.000000 1.000000 1.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.500000 0.500000 0.500000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:/Garage_Pole_BaseColor.jpg
-map_Ns C:/Garage_Pole_Roughness.jpg
-map_refl C:/Garage_Pole_Metallic.jpg
-map_Bump -bm 1.000000 C:/Garage_Pole_Normal.jpg
 
 newmtl Glass
-Ka 1.000000 1.000000 1.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.500000 0.500000 0.500000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 illum 2
-map_Kd C:/Glass_BaseColor.png
-map_Ns C:/Glass_Roughness.png
-map_refl C:/Glass_Metallic.png
-map_d C:/Glass_Alpha.png
-map_Bump -bm 1.000000 C:/Glass_Normal.png
 
 newmtl Metal_Tiles
 Ka 1.000000 1.000000 1.000000
@@ -129,13 +110,12 @@ map_Bump -bm 1.000000 texture/metal/knights-armor_normal-ogl.png
 map_d texture/metal/knights-armor_ao.png
 map_Ns texture/metal/knights-armor_height.png
 
-
 newmtl Vent_Blue
 Ns 250.000000
-Ka 1.000000 1.000000 1.000000
+Ka 0.500000 0.500000 0.500000
+Kd 0.500000 0.500000 0.500000
 Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 2
-map_Kd C:/vent_square_albedo.jpg
